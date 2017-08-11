@@ -14,11 +14,11 @@ The goals / steps of this project are the following:
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./images/1.png "Traffic Sign 1"
+[image5]: ./images/2.png "Traffic Sign 2"
+[image6]: ./images/3.png "Traffic Sign 3"
+[image7]: ./images/4.png "Traffic Sign 4"
+[image8]: ./images/5.png "Traffic Sign 5"
 
 ## Rubric Points
 
@@ -38,10 +38,10 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here's a random swatch of images from the train set, it's easy to see that many images are underexposed and others
+Here's a random swath of images from the train set, it's easy to see that many images are underexposed and others
 seem overly bright. Minimaxing could help (though I ended up not testing that because of time concerns).
 
-[IMAGE]
+![randomswath](images/swath.png)
 
 Here's a histogram over all classes for the entire dataset as well as individual portions of it. 
 The data are extremely unbalanced, but again I got away with getting good accuracy without balancing 
@@ -50,7 +50,7 @@ validation set, so I can get a good accuracy regardless. This is of course a rat
 to a real problem. I can pass this assignment, but the resulting car won't survive on the streets of 
 Bochum.
 
-[IMAGE]
+![randomswath](images/freq.png)
 
 ###Design and Test a Model Architecture
 
@@ -84,7 +84,6 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Fully connected		| 168 to 43 									|
 | Softmax				|              									|
-|:---------------------:|:---------------------------------------------:| 
 
 This is essentially a modified LeNet. The differences come in layer depths which I increased because
 I thought they would help with the higher number of classes.
@@ -203,9 +202,9 @@ Label: Bicycles crossing, Prob: 0.004547078628093004
 Label: Right-of-way at the next intersection, Prob: 0.0032785004004836082
 Label: Dangerous curve to the right, Prob: 0.0004777271533384919
 
-A visualization of this is given below:
+A visualization of this is given below for the first case:
 
-[[IMAGE]]
+![softmax](images/softmax_bar.png)
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
